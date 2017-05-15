@@ -9,6 +9,20 @@
   padding-left: 30px;
 }
 
+.row2{
+  /*display: flex;
+  flex-direction: row;
+  justify-content: space-around;*/
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.row3{
+  padding-top: 50px;
+  padding-bottom:30px;
+  padding-left: 30px;
+}
+
 .for2people{
   display:inline-block;
   height: 100px;
@@ -18,8 +32,8 @@
 
 .for4people{
   display:inline-block;
-  height: 100px;
-  width: 150px;
+  height: 150px;
+  width: 100px;
   background-color: green;
 }
 
@@ -29,3 +43,30 @@
   width: 200px;
   background-color: green;
 }
+
+#table2,#table3,#table4{
+  margin-left: 50px;
+  text-align: center;
+}
+
+#table5,#table6,#table7{
+  margin-left: 150px;
+  text-align: center;
+}
+
+#table9,#table10{
+  margin-left: 50px;
+  text-align: center;
+}
+
+#table1,#table8{
+  text-align: center;
+}
+
+/*#table8{
+  margin-left: 10px;
+}
+
+#table9,#table10{
+  margin-left: 50px;
+}*/
