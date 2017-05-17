@@ -1,15 +1,21 @@
-.box{
-  height: 500px;
+.box {
+
+  /*position: absolute;*/
+  height: 530px;
   width: 1000px;
-  background-color: red;
+  background-color: Beige;
 }
 
-.row1{
+.row1 {
+  float: left;
+  width: 900px;
   padding-top: 30px;
   padding-left: 30px;
 }
 
-.row2{
+.row2 {
+  width: 900px;
+  float: left;
   /*display: flex;
   flex-direction: row;
   justify-content: space-around;*/
@@ -17,52 +23,71 @@
   padding-top: 50px;
 }
 
-.row3{
+.row3 {
+  float: left;
+  width: 900px;
   padding-top: 50px;
-  padding-bottom:30px;
+  padding-bottom: 30px;
   padding-left: 30px;
 }
 
-.for2people{
-  display:inline-block;
+.for2people {
+  display: inline-block;
   height: 100px;
   width: 100px;
-  background-color: green;
+  background: radial-gradient(#858585, #4F4F4F);
+  border: 3px solid #363636;
+  border-radius: 4px;
 }
 
-.for4people{
-  display:inline-block;
+.for4people {
+  display: inline-block;
   height: 150px;
   width: 100px;
-  background-color: green;
+  background: radial-gradient(#858585, #4F4F4F);
+  border: 3px solid #363636;
+  border-radius: 4px;
 }
 
-.for6people{
-  display:inline-block;
+.for6people {
+  display: inline-block;
   height: 100px;
   width: 200px;
-  background-color: green;
+  background: radial-gradient(#858585, #4F4F4F);
+  border: 3px solid #363636;
+  border-radius: 4px;
 }
 
-#table2,#table3,#table4{
+.for2people:hover,.for4people:hover,.for6people:hover{
+  background:  radial-gradient(#ADADAD, #4F4F4F);
+}
+
+#table2, #table3, #table4 {
   margin-left: 50px;
   text-align: center;
 }
 
-#table5,#table6,#table7{
+#table5, #table6, #table7 {
   margin-left: 150px;
   text-align: center;
 }
 
-#table9,#table10{
+#table9, #table10 {
   margin-left: 50px;
   text-align: center;
 }
 
-#table1,#table8{
+#table1, #table8 {
   text-align: center;
 }
 
+#barnayaStoyka{
+  height: 530px;
+  width: 100px;
+  margin-left: 900px;
+  background-color: Chocolate;
+  text-align: center;
+}
 /*#table8{
   margin-left: 10px;
 }

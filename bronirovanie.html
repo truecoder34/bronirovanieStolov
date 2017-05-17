@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery-3.2.1.min.js">
+  </script>
   <script src="slider.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="slider.css">
   <link rel="stylesheet" href="style.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <title>Slider and Booking</title>
 </head>
 
 <body>
   <div>
     <!-- начало бегунка для кол-ва людей -->
-    <label>Количество человек<br><input type="range" oninput="peopleCount()" id="sliderCount" min="0" max="10" step="1" value="5"></label>
+    <label>Количество человек<br><input type="range" oninput="peopleCount()" id="sliderCount" min="0" max="6" step="1" value="5"></label>
     <span id="count"></span>
   </div>
   <!-- конец бегунка для кол-ва людей -->
@@ -26,25 +33,43 @@
   <!-- конец бегунка со временем -->
 
   <div class="box">
-  <div class="row1">
-    <div id="table1" class="for2people"> Стол 1 </div>
-    <div id="table2" class="for6people"> Стол 2 </div>
-    <div id="table3" class="for6people"> Стол 3 </div>
-    <div id="table4" class="for2people"> Стол 4 </div>
+    <div class="row1">
+      <div id="table1" class="for2people mytable"> Стол 1 </div>
+      <div id="table2" class="for6people mytable"> Стол 2 </div>
+      <div id="table3" class="for6people mytable"> Стол 3 </div>
+      <div id="table4" class="for2people mytable"> Стол 4 </div>
+    </div>
+
+    <div class="row2">
+      <div id="table5" class="for4people mytable"> Стол 5 </div>
+      <div id="table6" class="for4people mytable"> Стол 6 </div>
+      <div id="table7" class="for4people mytable"> Стол 7 </div>
+    </div>
+
+    <div class="row3">
+      <div id="table8" class="for2people mytable"> Стол 8 </div>
+      <div id="table9" class="for6people mytable"> Стол 9 </div>
+      <div id="table10" class="for6people mytable"> Стол 10 </div>
+    </div>
+    <div id="barnayaStoyka">Барная стойка</div>
   </div>
 
-  <div class="row2">
-    <div id="table5" class = "for4people"> Стол 5 </div>
-    <div id="table6" class = "for4people"> Стол 6 </div>
-    <div id="table7" class = "for4people"> Стол 7 </div>
-  </div>
 
-  <div class="row3">
-    <div id="table8" class="for2people"> Стол 8 </div>
-    <div id="table9" class="for6people"> Стол 9 </div>
-    <div id="table10" class="for6people"> Стол 10 </div>
+
+  <!-- всплывающее окно -->
+  <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal" style="margin-top:20px;width:300px; display:none;">Как узнать номер варианта?</button>
+  <div id="myModal" style="color:#000000" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+          <h4 class="modal-title">ЗАГОЛОВОК</h4>
+        </div>
+        <div class="modal-body" style="width:500px; height:200px;">
+        ЗДЕСЬ ДЕЛАТЬ ПОЛЯ с ИНФОРМАЦИЕЙ</div>
+        <div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
+      </div>
+    </div>
   </div>
-</div>
 
 </body>
 
