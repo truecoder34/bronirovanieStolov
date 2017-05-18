@@ -12,5 +12,10 @@ app.get("/", function(req,res){
   res.sendFile(__dirname +"/bronirovanie.html");
 })
 
+// Реализуем получение данных о клиенете с сайта на сервак
+app.post("/order", function(req,res){
+  console.log('name = ' + req.body.name + '\n surname = ' + req.body.surname + '\n number = ' + req.body.number1 + req.body.number2 + req.body.number3 + req.body.number4);
+})
+
 app.listen(7099);
 console.log("run at 7099");
