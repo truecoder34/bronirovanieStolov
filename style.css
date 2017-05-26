@@ -136,10 +136,9 @@ h1 {font-size:21px !important;}
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
 }
-/*#table8{
-  margin-left: 10px;
+#tableNumber{
+  display: none;
 }
-
-#table9,#table10{
-  margin-left: 50px;
-}*/
+#timeOfOrder{
+  display: none;
+}

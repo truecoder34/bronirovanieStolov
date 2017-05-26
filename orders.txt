@@ -1,0 +1,33 @@
+name = Владис
+ surname = Плотников
+ number = 9021231212
+name = Владислав
+surname = Плотников
+number = 9021231212
+name = Влади
+surname = Плотников
+number = 9021231212
+name = Влади
+surname = Плотников
+number = 9021231212
+name = Владислав
+surname = Плотников
+number = 9021231212
+ Стол 2 
+name = Владислав
+surname = Плотников
+number = 9021231212
+ Стол 2 
+name = Владислав
+surname = Плотников
+number = 9026574555
+ Стол 6 
+name = Владислав
+surname = Плотников
+number = 9275350331
+ Стол 6 
+14:10name = Владислав
+surname = Плотников
+number = 9275350331
+ Стол 6 
+14:10

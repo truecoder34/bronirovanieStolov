@@ -36,22 +36,22 @@
   <!--Начало-->
   <div class="box">
     <div class="row1">
-      <div id="table1" class="for2people mytable"> Стол 1 </div>
-      <div id="table2" class="for6people mytable"> Стол 2 </div>
-      <div id="table3" class="for6people mytable"> Стол 3 </div>
-      <div id="table4" class="for2people mytable"> Стол 4 </div>
+      <div id="table1" class="for2people mytable">Стол 1</div>
+      <div id="table2" class="for6people mytable">Стол 2</div>
+      <div id="table3" class="for6people mytable">Стол 3</div>
+      <div id="table4" class="for2people mytable">Стол 4</div>
     </div>
 
     <div class="row2">
-      <div id="table5" class="for4people mytable"> Стол 5 </div>
-      <div id="table6" class="for4people mytable"> Стол 6 </div>
-      <div id="table7" class="for4people mytable"> Стол 7 </div>
+      <div id="table5" class="for4people mytable">Стол 5</div>
+      <div id="table6" class="for4people mytable">Стол 6</div>
+      <div id="table7" class="for4people mytable">Стол 7</div>
     </div>
 
     <div class="row3">
-      <div id="table8" class="for2people mytable"> Стол 8 </div>
-      <div id="table9" class="for6people mytable"> Стол 9 </div>
-      <div id="table10" class="for6people mytable"> Стол 10 </div>
+      <div id="table8" class="for2people mytable">Стол 8</div>
+      <div id="table9" class="for6people mytable">Стол 9</div>
+      <div id="table10" class="for6people mytable">Стол 10</div>
     </div>
     <div class="barnayaStoyka effect8">
       <h1>Барная стойка</h1> </div>
@@ -68,21 +68,25 @@
           <h4 class="modal-title">ЗАГОЛОВОК</h4>
         </div>
         <div class="modal-body" style="width:500px; height:250px;">
-          <form method="post" action = "/order" > <!--хЕРЬ Для общения с сервером ТИП ЗАПРОСА, ОРДЕР определяет обрабатывающию функцию на сервере-->
+          <form method="post" action="/order">
+            <!--хЕРЬ Для общения с сервером ТИП ЗАПРОСА, ОРДЕР определяет обрабатывающию функцию на сервере-->
             <div class="form-group">
               <label class="control-label">Имя:</label>
-              <input type="text" class="form-control" name = "name" id="ClientName">
+              <input type="text" class="form-control" name="name" id="ClientName">
             </div>
             <div class="form-group">
               <label class="control-label">Фамилия:</label>
-              <input type="text" class="form-control" name = "surname" id="ClientSurname">
+              <input type="text" class="form-control" name="surname" id="ClientSurname">
             </div>
             <div class="form-group">
               <label class="control-label">Телефон:</label>+7
-              <input type="text" class="form-control" name = "number1" id="ClientNumber1" style="display: inline-block; width: 50px;"> - <input type="text" class="form-control" name = "number2" id="ClientNumber2" style="display: inline-block; width: 50px;"> - <input type="text" class="form-control"
-                name = "number3" id="ClientNumber3" style="display: inline-block; width: 44px;"> - <input type="text" class="form-control" name = "number4" id="ClientNumber4" style="display: inline-block; width: 44px;">
+              <input type="text" class="form-control" name="number1" id="ClientNumber1" style="display: inline-block; width: 50px;"> - <input type="text" class="form-control" name="number2" id="ClientNumber2" style="display: inline-block; width: 50px;">              - <input type="text" class="form-control" name="number3" id="ClientNumber3" style="display: inline-block; width: 44px;"> - <input type="text" class="form-control" name="number4" id="ClientNumber4" style="display: inline-block; width: 44px;">
             </div>
-            <div class="modal-footer"><input type="submit"  id="Confirmation"  value = "Подтвердить">
+            <!-- Невидимые поля -->
+            <input type="text" class="form-control" name="tableNumber" id="tableNumber"> <!-- Номер стола -->
+            <input type="text" class="form-control" name="timeOfOrder" id="timeOfOrder"> <!-- Слайдер времени -->
+              <!-- Закончились Невидимые поля -->
+            <div class="modal-footer"><input type="submit" id="Confirmation" value="Подтвердить">
               <button class="btn btn-default" type="button" data-dismiss="modal">Отмена</button></div>
           </form>
         </div>
