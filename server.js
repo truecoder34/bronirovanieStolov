@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(__dirname)); // Путь относительно которого нудно искать наши файлы. Задаем папку в которой искать файлики
 
-
+// реакция на get запрос. Обращаемся к самому сайту и послыаем пользователю нашу верстку
 app.get("/", function(req,res){
   res.setHeader("Content-Type","text/html");
   res.sendFile(__dirname +"/bronirovanie.html");
@@ -26,6 +26,15 @@ app.post("/order", function(req,res){
       console.log('Obosrantus pri zapisiy v fail');
   });
 })
+
+//Получаем пост запрос с клиента и отвечаем на него
+app.post("/getAvailableTables", function(req,res){
+  console.log(req.body.peopleCount);
+  console.log(req.body.time);
+  res.end("OTVET");
+})
+
+
 
 app.listen(7099);
 console.log("run at 7099");

@@ -2,17 +2,35 @@
  в функцию func был передан указатель this на этот слайдер,
 а у него есть функция val, которая возвращает значение*/
 $(document).on('change', '#sliderCount', function() {
-  alert("SOSEM");
-  alert($(this).val());
+//на сервер посылаем пост запрос на сервер, чтобы получить данные без обновления всей старницы
+//указываем в скобках путь пост запроса, и js объект в свойство которому записываем количество человек, и время
+//ТУТ AJAX делаем
+  $.post("/getAvailableTables", {
+      peopleCount: $("#count").html(),
+      time : $("#clock").html()
+    },
+    function(data) {// функция, которая вполнится когда сервер пришлет ответ, и в этой функции хранится ТО ЧТО ПРИСЛАЛ СЕРВЕР
+      alert(data);
+    }
+  );
+// alert($(this).val());
+});
+// и ТУТ AJAX делаем
+$(document).on('change', '#time', function() {
+  $.post("/getAvailableTables", {
+      peopleCount: $("#count").html(),
+      time : $("#clock").html()
+    },
+    function(data) { // функция, которая вполнится когда сервер пришлет ответ, и в этой функции хранится ТО ЧТО ПРИСЛАЛ СЕРВЕР
+      alert(data);
+    }
+  );
+// alert($(this).val());
 });
 
-$(document).on('change', '#time', function() {
-  alert("SOSEM2");
-  alert($('#clock').html()); // .html - функция получения текста выводимого справа от бегунка
-});
 
 // РЕАЛИЗУЕМ ВЫПАДАЮЩЕЕ ОКОШЕЧКО
-$(document).on('click', '.mytable', function(){
+$(document).on('click', '.mytable', function() {
   $("#tableNumber").val($(this).html()); // При нажатии на объект с классом .mytable занести в невидимое поле по айди #tableNumber заносим текстовое наполнение нашего стола "Стол.."
   $("#timeOfOrder").val($('#clock').html()); // заносим в невидимое поле с айди #timeOfOrder время считаное из слайдера по айди #clock
   $("#myModal").modal('show');
@@ -46,38 +64,37 @@ $(document).on('click', '#Confirmation', function(e) {
 
   var num1 = $('#ClientNumber1').val();
   if (number1.test(num1) == 0) {
-      alert("Первое поле телефонного номера введено неверено");
-      $('#ClientNumber1').val(''); // Очищаем  поле при помощи метода val
-      e.preventDefault();
+    alert("Первое поле телефонного номера введено неверено");
+    $('#ClientNumber1').val(''); // Очищаем  поле при помощи метода val
+    e.preventDefault();
   }
 
   var num2 = $('#ClientNumber2').val();
   if (number2.test(num2) == 0) {
-      alert("Второе поле телефонного номера введено неверено");
-      $('#ClientNumber2').val(''); // Очищаем  поле при помощи метода val
-      e.preventDefault();
+    alert("Второе поле телефонного номера введено неверено");
+    $('#ClientNumber2').val(''); // Очищаем  поле при помощи метода val
+    e.preventDefault();
   }
 
   var num3 = $('#ClientNumber3').val();
   if (number34.test(num3) == 0) {
-      alert("Третье поле телефонного номера введено неверено");
-      $('#ClientNumber3').val(''); // Очищаем  поле при помощи метода val
-      e.preventDefault();
+    alert("Третье поле телефонного номера введено неверено");
+    $('#ClientNumber3').val(''); // Очищаем  поле при помощи метода val
+    e.preventDefault();
   }
 
   var num4 = $('#ClientNumber4').val();
   if (number34.test(num4) == 0) {
-      alert("Четвертое поле телефонного номера введено неверено");
-      $('#ClientNumber4').val(''); // Очищаем  поле при помощи метода val
-      e.preventDefault();
+    alert("Четвертое поле телефонного номера введено неверено");
+    $('#ClientNumber4').val(''); // Очищаем  поле при помощи метода val
+    e.preventDefault();
   }
 
-  // Очищаем все поля при помощи метода val, который если получает что то в скобках, то НЕ ВОЗВРАЩАЕТ ЗНАЧЕНИЕ, а ПЕРЕНАЗНАЧАЕТ
-  // $('#ClientName').val('');
-  // $('#ClientSurname').val('');
-  // $('#ClientNumber1').val('');
-  // $('#ClientNumber2').val('');
-  // $('#ClientNumber3').val('');
-  // $('#ClientNumber4').val('');
+});
 
+//при закгрузке страницы устанавливаем начальные значения времени и количества человек
+  // A $( document ).ready() block.
+$(document).ready(function() {
+    $("#count").html('1')
+    $("#clock").html('10:00')
 });

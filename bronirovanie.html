@@ -21,13 +21,13 @@
 <body>
   <div>
     <!-- начало бегунка для кол-ва людей -->
-    <label>Количество человек<br><input type="range" oninput="peopleCount()" id="sliderCount" min="0" max="6" step="1" value="5"></label>
+    <label>Количество человек<br><input type="range" oninput="peopleCount()" id="sliderCount" min="1" max="6" step="1" value="1"></label>
     <span id="count"></span>
   </div>
   <!-- конец бегунка для кол-ва людей -->
   <div>
     <!-- начало бегунка со временем -->
-    <label>Время<br><input type="range" oninput="getTime()" id="time" min="900" max="2300" step="30"></label>
+    <label>Время<br><input type="range" oninput="getTime()" id="time" value="900" min="900" max="2300" step="30"></label>
     <span id="clock"></span>
   </div>
   <!-- конец бегунка со временем -->
@@ -36,22 +36,22 @@
   <!--Начало-->
   <div class="box">
     <div class="row1">
-      <div id="table1" class="for2people mytable">Стол 1</div>
-      <div id="table2" class="for6people mytable">Стол 2</div>
-      <div id="table3" class="for6people mytable">Стол 3</div>
-      <div id="table4" class="for2people mytable">Стол 4</div>
+      <div id="table1" class="for2people mytable">Стол 1 (2)</div>
+      <div id="table2" class="for6people mytable">Стол 2 (6)</div>
+      <div id="table3" class="for6people mytable">Стол 3 (6)</div>
+      <div id="table4" class="for2people mytable">Стол 4 (2)</div>
     </div>
 
     <div class="row2">
-      <div id="table5" class="for4people mytable">Стол 5</div>
-      <div id="table6" class="for4people mytable">Стол 6</div>
-      <div id="table7" class="for4people mytable">Стол 7</div>
+      <div id="table5" class="for4people mytable">Стол 5 (4)</div>
+      <div id="table6" class="for4people mytable">Стол 6 (4)</div>
+      <div id="table7" class="for4people mytable">Стол 7 (4)</div>
     </div>
 
     <div class="row3">
-      <div id="table8" class="for2people mytable">Стол 8</div>
-      <div id="table9" class="for6people mytable">Стол 9</div>
-      <div id="table10" class="for6people mytable">Стол 10</div>
+      <div id="table8" class="for2people mytable">Стол 8 (2)</div>
+      <div id="table9" class="for6people mytable">Стол 9 (6)</div>
+      <div id="table10" class="for6people mytable">Стол 10 (6)</div>
     </div>
     <div class="barnayaStoyka effect8">
       <h1>Барная стойка</h1> </div>
