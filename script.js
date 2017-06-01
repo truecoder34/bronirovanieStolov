@@ -13,15 +13,25 @@ $(document).on('change', '#sliderCount', function() {
       var tables = (JSON.parse(data)); // с сервера Пришли номера всех доступных столов в формате json, распаршеваем их и в переменную
       // Проходим по всем айдишкам стоов и присваиваем им класс reserved
       $("#table1").addClass("reserved");
+      $("#table1").removeClass("free");
       $("#table2").addClass("reserved");
+      $("#table2").removeClass("free");
       $("#table3").addClass("reserved");
+      $("#table3").removeClass("free");
       $("#table4").addClass("reserved");
+      $("#table4").removeClass("free");
       $("#table5").addClass("reserved");
+      $("#table5").removeClass("free");
       $("#table6").addClass("reserved");
+      $("#table6").removeClass("free");
       $("#table7").addClass("reserved");
+      $("#table7").removeClass("free");
       $("#table8").addClass("reserved");
+      $("#table8").removeClass("free");
       $("#table9").addClass("reserved");
+      $("#table9").removeClass("free");
       $("#table10").addClass("reserved");
+      $("#table10").removeClass("free");
       // потом тем номерам столов, что пришли с сервака присваиваем доступность
       Object.keys(tables).forEach(function(el){
         $("#table" + el.toString()).removeClass("reserved");
@@ -40,15 +50,25 @@ $(document).on('change', '#time', function() {
       var tables = (JSON.parse(data)); // с сервера Пришли номера всех доступных столов в формате json, распаршеваем их и в переменную
       // Проходим по всем айдишкам стоов и присваиваем им класс reserved
       $("#table1").addClass("reserved");
+      $("#table1").removeClass("free");
       $("#table2").addClass("reserved");
+      $("#table2").removeClass("free");
       $("#table3").addClass("reserved");
+      $("#table3").removeClass("free");
       $("#table4").addClass("reserved");
+      $("#table4").removeClass("free");
       $("#table5").addClass("reserved");
+      $("#table5").removeClass("free");
       $("#table6").addClass("reserved");
+      $("#table6").removeClass("free");
       $("#table7").addClass("reserved");
+      $("#table7").removeClass("free");
       $("#table8").addClass("reserved");
+      $("#table8").removeClass("free");
       $("#table9").addClass("reserved");
+      $("#table9").removeClass("free");
       $("#table10").addClass("reserved");
+      $("#table10").removeClass("free");
       // потом тем номерам столов, что пришли с сервака присваиваем доступность
       Object.keys(tables).forEach(function(el){
         $("#table" + el.toString()).removeClass("reserved");
@@ -60,12 +80,14 @@ $(document).on('change', '#time', function() {
 
 
 // РЕАЛИЗУЕМ функционал ВЫПАДАЮЩЕго ОКОШЕЧКО
-
 $(document).on('click', '.mytable', function() {
-  $("#tableNumber").val($(this).html()); // При нажатии на объект с классом .mytable занести в невидимое поле по айди #tableNumber заносим текстовое наполнение нашего стола "Стол.."
-  $("#timeOfOrder").val($('#clock').html()); // заносим в невидимое поле с айди #timeOfOrder время считаное из слайдера по айди #clock
-  $("#myModal").modal('show');
-  $('.modal-title').html('Заказать ' + $(this).html());
+  //Проверка на то, присвоен ли столу, на который мы жмем класс free в стилях, говорящий о том что он доступен
+  if ($(this).hasClass("free")) {
+    $("#tableNumber").val($(this).html()); // При нажатии на объект с классом .mytable занести в невидимое поле по айди #tableNumber заносим текстовое наполнение нашего стола "Стол.."
+    $("#timeOfOrder").val($('#clock').html()); // заносим в невидимое поле с айди #timeOfOrder время считаное из слайдера по айди #clock
+    $("#myModal").modal('show');
+    $('.modal-title').html('Заказать ' + $(this).html());
+  }
 });
 
 // Код реаигирующий на нажатие кнопки подтвердить

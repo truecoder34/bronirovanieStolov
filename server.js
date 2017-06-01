@@ -46,6 +46,8 @@ app.post("/order", function(req,res){
      if (err) throw err;
      console.log("INSERT ok");
    });
+   res.setHeader("Content-Type","text/html");
+   res.sendFile(__dirname +"/bronirovanie.html");
 })
 /*------Конец этого блока------*/
 var indicator;

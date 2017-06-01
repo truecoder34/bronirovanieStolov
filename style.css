@@ -32,6 +32,10 @@
   padding-left: 30px;
 }
 
+.btn{
+  margin-top:-20px;
+}
+
 .for2people {
   display: inline-block;
   height: 100px;
