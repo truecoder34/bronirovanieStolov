@@ -1,5 +1,4 @@
 .box {
-
   /*position: absolute;*/
   height: 510px;
   width: 1000px;
@@ -60,7 +59,8 @@
   border-radius: 4px;
 }
 
-.for2people:hover,.for4people:hover,.for6people:hover{
+/*.for2people.free:hover,.for4people.free:hover,.for6people.free:hover*/
+.for2people.free:hover,.for4people.free:hover,.for6people.free:hover{
   background:  radial-gradient(#ADADAD, #4F4F4F);
 }
 
@@ -141,4 +141,12 @@ h1 {font-size:21px !important;}
 }
 #timeOfOrder{
   display: none;
+}
+
+.reserved {
+    /*width: 200px;
+    height: 100px;
+    border: 3px solid #363636;
+    border-radius: 4px;*/
+    background: repeating-linear-gradient(135deg, #1F1F1F, #1F1F1F 10px, #2B2B2B 10px, #2B2B2B 20px);
 }
